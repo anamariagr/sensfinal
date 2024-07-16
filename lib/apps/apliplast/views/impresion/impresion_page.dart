@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sens2/apps/apliplast/views/impresion/impresion_etiqueta.dart';
-import 'package:sens2/apps/apliplast/views/impresion/form_report_extrusion.dart';
+import 'package:sens2/apps/apliplast/views/impresion/print_ticket.dart';
+import 'package:sens2/apps/apliplast/views/impresion/end_work.dart';
 import 'package:sens2/core/components/modals/options_dialog.dart';
 
 class ReportFormWidget extends StatelessWidget {
@@ -170,14 +170,14 @@ class _ImpresionPageState extends State<ImpresionPage> {
           {
             'text': 'Imprimir Ticket',
             'onPressed': () async {
-              final result = await Get.to(() => FormEtiqueta());
+              final result = await Get.toNamed('/printTicket');
               Get.back();
             },
           },
           {
             'text': 'Fin de Turno',
-             'onPressed': () async {
-              final result = await Get.to(() => FormExtruccion());
+            'onPressed': () async {
+              final result = await Get.toNamed('/endWork');
               Get.back();
             },
           },
@@ -366,16 +366,16 @@ class _ImpresionPageState extends State<ImpresionPage> {
         title: 'Texto: bobina 10 kg',
         options: [
           {
-            'text': 'Captura',
+            'text': 'Imprimir Ticket',
             'onPressed': () async {
-              final result = await Get.to(() => FormEtiqueta());
+              final result = await Get.toNamed('/printTicket');
               Get.back();
             },
           },
-          
+
         ],
       )
-      
+
     );
   }
 }

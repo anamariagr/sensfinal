@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
         Get.put(RequestQueueService());
         // No inicializamos MqttService aquí
       }),
-      initialRoute: '/Formextruccion',
+      initialRoute: '/impresion',
 
       getPages: [
         GetPage(name: '/', page: () => AuthWrapper()),
@@ -51,6 +51,8 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
 
 class AuthWrapper extends StatelessWidget {
   final AuthService authService = Get.find<AuthService>();

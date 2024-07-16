@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 import 'package:get/get.dart';
 import 'package:sens2/apps/apliplast/bindings/Login_binding.dart';
-import 'package:sens2/apps/apliplast/bindings/extrusionReport_binding.dart';
+import 'package:sens2/apps/apliplast/bindings/extrusion_report_binding.dart';
 import 'package:sens2/apps/apliplast/bindings/gate_binding.dart';
 import 'package:sens2/apps/apliplast/bindings/order_production_binding.dart';
 import 'package:sens2/apps/apliplast/bindings/printJobOrder_binding.dart';
@@ -11,10 +11,13 @@ import 'package:sens2/apps/apliplast/bindings/register_binding.dart';
 import 'package:sens2/apps/apliplast/bindings/semiya_bindin.dart';
 import 'package:sens2/apps/apliplast/bindings/servidor_binding.dart';
 import 'package:sens2/apps/apliplast/bindings/imprimir_binding.dart';
+import 'package:sens2/apps/apliplast/bindings/end_work_binding.dart';
+import 'package:sens2/apps/apliplast/bindings/print_ticket_binding.dart';
 
+import 'package:sens2/apps/apliplast/views/impresion/end_work.dart';
+import 'package:sens2/apps/apliplast/views/impresion/print_ticket.dart';
 import 'package:sens2/apps/apliplast/views/extrusion_report/extrusion_page.dart';
 import 'package:sens2/apps/apliplast/views/gatepage/gate_page.dart';
-import 'package:sens2/apps/apliplast/views/impresion/form_report_extrusion.dart';
 import 'package:sens2/apps/apliplast/views/oder_sealed/oder_sealed_page.dart';
 import 'package:sens2/apps/apliplast/views/print_job_order/print_Jobo_order_page.dart';
 import 'package:sens2/apps/apliplast/views/printreport/print_report_page.dart';
@@ -101,15 +104,20 @@ List<GetPage> getRoutesApiplast() {
       page: () => LoginPage(),
       transition: Transition.native,
       binding: LoginBinding(),
-
-    ),
-    GetPage(
-      name: '/Formextruccion',
-      page: () => FormExtruccion(),
-      transition: Transition.native,
-      binding: ExtrusionReportBinding(),
     ),
      GetPage(
+      name: '/endWork',
+      page: () => EndWork(),
+      transition: Transition.native,
+      binding: EndWorkBinding(),
+    ),
+      GetPage(
+      name: '/printTicket',
+      page: () => PrintTicket(),
+      transition: Transition.native,
+      binding: PrintTicketBinding(),
+    ),
+      GetPage(
       name: '/extrusionReport',
       page: () => ExtrusionReport(),
       transition: Transition.native,

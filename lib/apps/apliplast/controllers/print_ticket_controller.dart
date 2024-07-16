@@ -3,13 +3,20 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 
-class PrinticketController extends GetxController {
+class PrintTicketController extends GetxController {
   var orderController = TextEditingController().obs;
   var rollController = TextEditingController().obs;
   var operatorController = TextEditingController().obs;
+
   var maquinController = TextEditingController().obs;
   var extentController = TextEditingController().obs;
   var thicknessController = TextEditingController().obs;
+  var netWeightController = TextEditingController().obs;
+  var grossWeightController = TextEditingController().obs;
+  var coilController = TextEditingController().obs;
+
+
+
   var colorController = TextEditingController().obs;
   var densityController = TextEditingController().obs;
   var clientController = TextEditingController().obs;
